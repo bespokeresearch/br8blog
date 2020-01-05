@@ -1,300 +1,171 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8" />
-      <title>blog 01 - passwords</title>
-      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(85, 85, 85); background-color: white; overflow: auto; }
-.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
-.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(3, 3, 3); }
-.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
-.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
-.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
-.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) strong { color: rgb(3, 3, 3); }
-.markdown-preview:not([data-use-github-style]) del { color: rgb(126, 126, 126); }
-.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: black; }
-.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
-.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(126, 126, 126); border-color: rgb(214, 214, 214); border-width: 4px; }
-.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(214, 214, 214); background: none; }
-.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
-.markdown-preview:not([data-use-github-style]) th { color: rgb(3, 3, 3); }
-.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(214, 214, 214); }
-.markdown-preview:not([data-use-github-style]) code { color: rgb(3, 3, 3); background-color: rgb(240, 240, 240); }
-.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(245, 245, 245); }
-.markdown-preview:not([data-use-github-style]) kbd { color: rgb(3, 3, 3); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(214, 214, 214) rgb(214, 214, 214) rgb(199, 199, 199); border-image: initial; background-color: rgb(240, 240, 240); }
-.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
-.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
-.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
-.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
-.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
-.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
-.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
-.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
-.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
-.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
-.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
-.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
-.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
-.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
-.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
-.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
-.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
-.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
-.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
-.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
-.markdown-preview[data-use-github-style] dl { padding: 0px; }
-.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
-.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
-.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
-.markdown-preview[data-use-github-style] table th { font-weight: bold; }
-.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
-.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
-.markdown-preview[data-use-github-style] .emoji { max-width: none; }
-.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
-.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
-.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
-.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
-.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
-.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
-.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
-.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
-.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
-.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
-.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
-.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
-.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
-.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
-.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
-.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
-.markdown-preview[data-use-github-style] code { color: inherit; }
-.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
-.markdown-preview pre.editor-colors { user-select: auto; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
-.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
-.markdown-preview ul label { vertical-align: top; }
-.bracket-matcher .region {
-  border-bottom: 1px dotted lime;
-  position: absolute;
-}
-.line-number.bracket-matcher.bracket-matcher {
-  color: #555;
-  background-color: rgba(255, 255, 134, 0.34);
-}
+<html lang="english">
 
-pre.editor-colors {
-  background-color: white;
-  color: #555;
+<head>
+        <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Bespoke Research Ad Infinitum</title>
+
+    <meta name="description" content="Simple solutions for complex problems" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='stylesheet' id='fonts-css'  href='//fonts.googleapis.com/css?family=Lora%3A400%2C400italic%7COswald%3A400%2C600&#038;ver=2.6.2' type='text/css' media='screen' />
+    <link href="https://blog.br8.ca/theme/css/blog-main.css" rel="stylesheet">
+
+
+  <link href="https://blog.br8.ca/" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="https://blog.br8.ca/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://blog.br8.ca/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Bespoke Research Ad Infinitum"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Bespoke Research Ad Infinitum"/>
+<meta property="og:description" content="View the blog."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://blog.br8.ca/"/>
+<meta property="og:image" content="https://blog.br8.ca/img/home-bg.png">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Website",
+  "name": " Bespoke Research Ad Infinitum ",
+  "url" : "https://blog.br8.ca/",
+  "image": "https://blog.br8.ca/img/home-bg.png",
+  "description": "View the blog."
 }
-pre.editor-colors .invisible-character {
-  color: rgba(85, 85, 85, 0.2);
-}
-pre.editor-colors .indent-guide {
-  color: rgba(85, 85, 85, 0.2);
-}
-pre.editor-colors .wrap-guide {
-  background-color: rgba(85, 85, 85, 0.2);
-}
-pre.editor-colors .gutter {
-  color: #555;
-  background: white;
-}
-pre.editor-colors .gutter .line-number.folded,
-pre.editor-colors .gutter .line-number:after,
-pre.editor-colors .fold-marker:after {
-  color: #e87b00;
-}
-pre.editor-colors .invisible {
-  color: #555;
-}
-pre.editor-colors .selection .region {
-  background-color: #e1e1e1;
-}
-pre.editor-colors .bracket-matcher .region {
-  background-color: #C9C9C9;
-  opacity: .7;
-  border-bottom: 0 none;
-}
-pre.editor-colors.is-focused .cursor {
-  border-color: black;
-}
-pre.editor-colors.is-focused .selection .region {
-  background-color: #afc4da;
-}
-pre.editor-colors.is-focused .line-number.cursor-line-no-selection,
-pre.editor-colors.is-focused .line.cursor-line {
-  background-color: rgba(255, 255, 134, 0.34);
-}
-.syntax--comment {
-  color: #999988;
-  font-style: italic;
-}
-.syntax--string {
-  color: #D14;
-}
-.syntax--string .syntax--source,
-.syntax--string .syntax--meta.syntax--embedded.syntax--line {
-  color: #5A5A5A;
-}
-.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
-  color: #920B2D;
-}
-.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
-  color: #920B2D;
-}
-.syntax--constant.syntax--numeric {
-  color: #D14;
-}
-.syntax--constant.syntax--language {
-  color: #606aa1;
-}
-.syntax--constant.syntax--character,
-.syntax--constant.syntax--other {
-  color: #606aa1;
-}
-.syntax--constant.syntax--symbol {
-  color: #990073;
-}
-.syntax--constant.syntax--numeric.syntax--line-number.syntax--find-in-files .syntax--match {
-  color: rgba(143, 190, 0, 0.63);
-}
-.syntax--variable {
-  color: #008080;
-}
-.syntax--variable.syntax--parameter {
-  color: #606aa1;
-}
-.syntax--keyword {
-  color: #222;
-  font-weight: bold;
-}
-.syntax--keyword.syntax--unit {
-  color: #445588;
-}
-.syntax--keyword.syntax--special-method {
-  color: #0086B3;
-}
-.syntax--storage {
-  color: #222;
-}
-.syntax--storage.syntax--type {
-  color: #222;
-}
-.syntax--entity.syntax--name.syntax--class {
-  text-decoration: underline;
-  color: #606aa1;
-}
-.syntax--entity.syntax--other.syntax--inherited-class {
-  text-decoration: underline;
-  color: #606aa1;
-}
-.syntax--entity.syntax--name.syntax--function {
-  color: #900;
-}
-.syntax--entity.syntax--name.syntax--tag {
-  color: #008080;
-}
-.syntax--entity.syntax--other.syntax--attribute-name {
-  color: #458;
-  font-weight: bold;
-}
-.syntax--entity.syntax--name.syntax--filename.syntax--find-in-files {
-  color: #E6DB74;
-}
-.syntax--support.syntax--constant,
-.syntax--support.syntax--function,
-.syntax--support.syntax--type {
-  color: #458;
-}
-.syntax--support.syntax--class {
-  color: #008080;
-}
-.syntax--invalid {
-  color: #F8F8F0;
-  background-color: #00A8C6;
-}
-.syntax--invalid.syntax--deprecated {
-  color: #F8F8F0;
-  background-color: #8FBE00;
-}
-.syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json,
-.syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json .syntax--punctuation.syntax--string {
-  color: #000080;
-}
-.syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json {
-  color: #d14;
-}
-.syntax--meta.syntax--diff,
-.syntax--meta.syntax--diff.syntax--header {
-  color: #75715E;
-}
-.syntax--css.syntax--support.syntax--property-name {
-  font-weight: bold;
-  color: #333;
-}
-.syntax--css.syntax--constant {
-  color: #099;
-}
-.syntax--source.syntax--gfm {
-  color: #444;
-}
-.syntax--gfm .syntax--markup.syntax--heading {
-  color: #111;
-}
-.syntax--gfm .syntax--link {
-  color: #888;
-}
-.syntax--gfm .syntax--variable.syntax--list {
-  color: #888;
-}
-.syntax--markdown .syntax--paragraph {
-  color: #444;
-}
-.syntax--markdown .syntax--heading {
-  color: #111;
-}
-.syntax--markdown .syntax--link {
-  color: #888;
-}
-.syntax--markdown .syntax--link .syntax--string {
-  color: #888;
-}
-</style>
-  </head>
-  <body class='markdown-preview' data-use-github-style><p>So many passwords, so little time...</p>
-<p>How many times were you sitting at your desk in Vaughan, and trying to remember what was your account password? Or writing your pin on a sticky and attaching it to your wallet?</p>
-<p>Simple and free password manager can make your life so much easier. You only need to remember one password and the reset are generated and stored securely in the database.</p>
-<p>First of all you can keep your passwords in your browser. All modern browser can store them in password protected storage. As you open the website, it offers you the right password, all you need to do is hit enter and login.</p>
-<p>If you want to keep your passwords outside of your browser and for example transfer them between devices, give a try KeePass family of password managers, which are free and easy to use. Not only it can save them, it can also store other sensitive information as well as generate secure passwords for you so you don't have to spend time when you registering new account for yourself.</p>
-<p>#organize #security #passwords #productivity</p></body>
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="blog-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="blog-name"><a href="https://blog.br8.ca/">Bespoke Research Ad Infinitum</a></h1>
+
+          <div class="blog-cover cover" style="background-image: url('https://blog.br8.ca/img/home-bg.png')"></div>
+      </div>
+    </header>
+
+
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<div id="index" class="container">
+  <main id="content" role="main">
+<div class="extra-pagination">
+</div>
+
+    <article class="post">
+        <div class="inner">
+            <header class="post-header">
+                <time class="post-date" datetime="Tue 24 December 2019">Tue 24 December 2019</time>
+                <h2 class="post-title"><a href="/backup.html" rel="bookmark" title="Permalink to Backup">Backup</a>
+                </h2>
+                <div class="clear"></div>
+            </header>
+                <section class="post-excerpt">
+                    <p>
+                        Of course I have a disaster recovery plan. Unfortunately it was on my hard drive when it crashed... (from a business meeting, in a galaxy far far away) Computers fail, hard drives stop working, data gets corrupted. There is a sizeable body of...&nbsp;<a href="/backup.html">read.</a>
+                    </p>
+                </section>
+        </div>
+    </article>
+    <article class="post">
+        <div class="inner">
+            <header class="post-header">
+                <time class="post-date" datetime="Sat 21 December 2019">Sat 21 December 2019</time>
+                <h2 class="post-title"><a href="/excel-vlookup.html" rel="bookmark" title="Permalink to Combining data in Excel">Combining data in Excel</a>
+                </h2>
+                <div class="clear"></div>
+            </header>
+                <section class="post-excerpt">
+                    <p>
+                        Why did the Excel import the table? Because it was pivotal. We all love spreadsheets, helps us do the calculations. Income, account receivables, expenses - anything you throw at it Excel will happily take and give you back results. Sometimes you...&nbsp;<a href="/excel-vlookup.html">read.</a>
+                    </p>
+                </section>
+        </div>
+    </article>
+    <article class="post">
+        <div class="inner">
+            <header class="post-header">
+                <time class="post-date" datetime="Thu 19 December 2019">Thu 19 December 2019</time>
+                <h2 class="post-title"><a href="/passwords-everywhere.html" rel="bookmark" title="Permalink to Passwords Everywhere">Passwords Everywhere</a>
+                </h2>
+                <div class="clear"></div>
+            </header>
+                <section class="post-excerpt">
+                    <p>
+                        So many passwords, so little time... How many times were you sitting at your desk and trying to remember what was your account password? Or writing your pin on a sticky and attaching it to your wallet? Simple and free password manager can make...&nbsp;<a href="/passwords-everywhere.html">read.</a>
+                    </p>
+                </section>
+        </div>
+    </article>
+
+
+
+  </main>
+</div>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://blog.br8.ca/theme/js/script.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-141684358-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
 </html>

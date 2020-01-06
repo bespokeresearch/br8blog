@@ -6,7 +6,10 @@ h1.post-title, h2.post-title, .post-content h2, .post-content h3, .post-content 
 
 .post-date, .return { font-family: "Oswald", Arial, serif; font-weight: 400; }
 
-#content { width: 55rem; margin: 0 auto; padding: 0 0 4.688rem 0; margin-top: 6.25rem; color: #666666;}
+#post-header { width: 55rem; margin: 0 auto;  margin-top: 1.25rem;}
+#navigation {margin-bottom: 1.25rem;}
+
+#content { width: 55rem; margin: 0 auto; padding: 0 0 4.688rem 0; margin-top: 2.25rem; color: #666666;}
 #content p { font-size: 1.188rem; line-height: 1.875rem; margin: 0 0 2.188rem 0; padding: 0; letter-spacing: -0.00625rem; }
 
 @media (max-width: 720px) { #content { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; } }

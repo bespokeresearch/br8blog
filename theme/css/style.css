@@ -22,14 +22,6 @@ h1.tag-title { margin-top: 0; font-weight: 400; font-size: 3rem; line-height: 2r
 .tag-description { font-family: "Oswald", Arial, serif; font-weight: 400; font-size: 0.6875rem; line-height: 0.6875rem; margin-bottom: 0.3125rem; letter-spacing: 0.03125rem; color: #999999; }
 
 
-@media (max-width: 720px) {
-
-    #post-header { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
-    #blog-header { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
-    #content { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
-    .post-share{    padding-bottom: 100px;}
-}
-
 article.post {padding-bottom: 30px;}
 
 article.post h2.post-title, article.post h2.post-title a  {
@@ -82,3 +74,18 @@ footer a:hover {
   background-color: #333333;
 }
 
+
+@media (max-width: 720px) {
+
+    #post-header { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
+    #blog-header { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
+    #content { width: auto; max-width: 90%; padding-bottom: 0; margin-top: 0; }
+    .post-share{    padding-bottom: 100px;}
+
+    .footer {
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+        letter-spacing: 0.03125rem;
+    }
+}
